@@ -19,7 +19,7 @@ export class WS
     async getSocket()
     {
         try {
-            const response = await fetch("config.json");
+            const response = await fetch("../config.json");
             this.#settings = await response.json();
             this.#ws = new WebSocket(this.#settings.wsUrl);
             this.#setting();
